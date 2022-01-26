@@ -55,3 +55,9 @@ Namespace: Defines a virtual boundary within a cluster for access control mechan
 ServiceAccount: Defines a virtual user that can be assigned a Role or ClusterRole which contains a set of permissions scoped to a set of resources (eg. your user login on your machine)
 Role: Defines namespace-scoped resource access permissions. Linked to a ServiceAccount with namespace-scoped access via a RoleBinding resource
 ClusterRole: Defines cluster-wide resource access permissions. Linked to a ServiceAccount with cluster-wide access via a ClusterRoleBinding resource
+
+# Exposure
+Finally, there’s no use of an application that no one can access. After we’ve made the application happy and it’s running as expected, we expose it to the rest of the network/public internet for users and other services to access it.
+
+1. Service: Exposes a workload to the cluster. Think running npm start on a server application and your application being available on localhost:3000. Behind the scenes, your application is binding to a port on your computer. A Service defines that binding.
+2. Ingress: Exposes a Service to outside the cluster. Ever tried asking your co-worker to access your localhost:3000? Chances are you’d have ended up using ngrok or a similar tunneling software. An Ingress is basically an ngrok that exposes your localhost:3000 so it becomes accessible to a larger network.
