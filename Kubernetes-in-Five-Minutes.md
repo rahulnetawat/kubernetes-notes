@@ -45,9 +45,9 @@ So we've defined how our application will be deployed and configured, and we've 
 # Access Control
 But what if someone accidentally introduced a nasty virus into our application (somehow)? In an enterprise environment with compliance teams nagging at the whole DevOps thingy, we need to ensure that applications can only access resources that it needs to access. We on the other hand, need access control.
 
-**Namespace:** Defines a virtual boundary within a cluster for access control mechanisms to be implemented on top of. Think about these like browser tabs: an open Facebook tab shouldn’t know what you’re googling in another tab.
-ServiceAccount: Defines a virtual user that can be assigned a Role or ClusterRole which contains a set of permissions scoped to a set of resources (eg. your user login on your machine)
-**Role:** Defines namespace-scoped resource access permissions. Linked to a ServiceAccount with namespace-scoped access via a RoleBinding resource
+**Namespace:** Defines a virtual boundary within a cluster for access control mechanisms to be implemented on top of. Think about these like browser tabs: an open Facebook tab shouldn’t know what you’re googling in another tab.\
+**ServiceAccount:** Defines a virtual user that can be assigned a Role or ClusterRole which contains a set of permissions scoped to a set of resources (eg. your user login on your machine)\
+**Role:** Defines namespace-scoped resource access permissions. Linked to a ServiceAccount with namespace-scoped access via a RoleBinding resource\
 **ClusterRole:** Defines cluster-wide resource access permissions. Linked to a ServiceAccount with cluster-wide access via a ClusterRoleBinding resource
 
 # Exposure
