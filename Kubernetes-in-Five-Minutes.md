@@ -1,12 +1,18 @@
 The areas that Kubernetes natively accounts for in logical order are:
 
-1. Hardware – Node
-2. Orchestration – Deployment, Job, CronJob, StatefulSet, DaemonSet
-3. Configuration – ConfigMap, Secret
-4. Persistence — PersistentVolumeClaim, PersistentVolume
-5. Execution – Pod, ReplicaSet
-6. Access Control – Namespace, ServiceAccount, Role, ClusterRole
-7. Exposure – Service, Ingress
+[1. Hardware](#hardware) - Node
+
+[2. Orchestration](#orchestration) - Deployment, Job, CronJob, StatefulSet, DaemonSet
+
+[3. Configuration](#configuration) - ConfigMap, Secret
+
+[4. Persistence](#persistence) - PersistentVolumeClaim, PersistentVolume
+
+[5. Execution](#execution) - Pod, ReplicaSet
+
+[6. Access Control](#access_control) - Namespace, ServiceAccount, Role, ClusterRole
+
+[7. Exposure](#exposure) - Service, Ingress
 
 # Hardware
 
