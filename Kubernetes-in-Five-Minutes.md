@@ -1,6 +1,6 @@
 The areas that Kubernetes natively accounts for in logical order are:
 
-1. [Hardware] Hardware – Node
+1. Hardware – Node
 2. Orchestration – Deployment, Job, CronJob, StatefulSet, DaemonSet
 3. Configuration – ConfigMap, Secret
 4. Persistence — PersistentVolumeClaim, PersistentVolume
