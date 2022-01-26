@@ -23,3 +23,15 @@ After we've defined our hardware, we need a plan on how to deploy our applicatio
 3. CronJob: Periodically-run one-off workload (eg. data sync task)
 4. StatefulSet: Workloads that require a readable/writable data volume (hard disk) that persists beyond restarts and is not shared amongst other instances of the same application. Use cases include services that implement eventual consistency (eg. transactional databases)
 5. DaemonSet: Workloads that should be distributed across all targeted Nodes (eg. log collectors, system monitors, security software)
+
+# Configuration
+So we've got a plan, but applications tend to be a fickle bunch and also need to be told certain things at runtime instead of plan-time; Things such as which network interface to bind to, which port to listen on, which API keys to use et cetera. While these things can technically be hard-coded, best-practices of 2020 generally suggest they should not. So we need a way to configure our application at runtime.
+
+1. ConfigMap: Stores configuration for mounting as environment variables or read-only files (eg. SERVER_PORT=8080)
+2. Secret: Fundamentally the same but stored in Base64 encoded text and used for values that should not be stored in plaintext (eg. GITHUB_API_TOKEN=😱)
+
+# Persistence
+Now what if our application handles files and requires a hard disk that it can read and write from across different versions and instances? We need our data to persist by providing our application’s system with a hard disk (AKA volume in technical terms).
+
+1. PersistentVolume: A logical "hard drive" (eg. Seagate 2TB, EBS)
+2. PersistentVolumeClaim: Binds a PersistentVolume to a Pod. This is more of a virtual construct: think of it as the act of mounting a hard drive. A PVC defines that intention to mount a hard drive and expose its filesystem for an application to use.
