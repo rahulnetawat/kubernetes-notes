@@ -35,3 +35,9 @@ Now what if our application handles files and requires a hard disk that it can r
 
 1. PersistentVolume: A logical "hard drive" (eg. Seagate 2TB, EBS)
 2. PersistentVolumeClaim: Binds a PersistentVolume to a Pod. This is more of a virtual construct: think of it as the act of mounting a hard drive. A PVC defines that intention to mount a hard drive and expose its filesystem for an application to use.
+
+# Execution
+So we've defined how our application will be deployed and configured, and we've given it some hard disk space to use. All that's left now is to execute the application.
+
+1. Pod: One instance of your application (eg. npm start, go run ./...)
+2. ReplicaSet: Maintains the desired count of your application instances.
