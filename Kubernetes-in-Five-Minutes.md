@@ -9,3 +9,7 @@ The areas that Kubernetes natively accounts for in logical order are:
 7. Exposure – Service, Ingress
 
 # Hardware
+
+All software has one fundamental dependency: a machine to run on. We need hardware whether it’s our own computers or someone else's and this abstraction comes in the form of a Node resource type.
+
+1. Node: Represents a logical machine/VM (eg. your computer, ec2 instance, a droplet).
