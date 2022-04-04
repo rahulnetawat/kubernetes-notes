@@ -34,6 +34,7 @@ So we've got a plan, but applications tend to be a fickle bunch and also need to
 Now what if our application handles files and requires a hard disk that it can read and write from across different versions and instances? We need our data to persist by providing our application’s system with a hard disk (AKA volume in technical terms).
 
 1. **PersistentVolume:** A logical "hard drive" (eg. Seagate 2TB, EBS)
+
 2. **PersistentVolumeClaim:** Binds a PersistentVolume to a Pod. This is more of a virtual construct: think of it as the act of mounting a hard drive. A PVC defines that intention to mount a hard drive and expose its filesystem for an application to use.
 
 # Execution
