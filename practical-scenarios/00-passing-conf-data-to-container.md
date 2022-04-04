@@ -1,6 +1,7 @@
 # HTPASSWD file creation
 
 1. Generate an htpasswd file and store it as a Secret.
+ <details><summary>show</summary><p>
 ```
 htpasswd -c .htpasswd user
 ```
